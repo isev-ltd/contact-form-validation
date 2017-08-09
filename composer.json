@@ -1,0 +1,26 @@
+{
+  "name": "acoustep/contact-form-validation",
+  "description": "Enhanced Validation for Craft CMS Contact Form Plugin",
+  "version": "0.0.1",
+  "type": "craft-plugin",
+  "minimum-stability": "dev",
+  "require": {
+      "craftcms/cms": "^3.0.0-beta.20",
+      "wixel/gump": "~v1.5.4",
+      "craftcms/contact-form": "~2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Acoustep\\ContactFormValidation\\": "src/"
+    }
+  },
+  "support": {
+    "email": "mitch@isev.co.uk"
+  },
+  "extra": {
+    "handle": "contact-form-validation",
+    "name": "Contact Form Validation",
+    "developer": "Mitch Stanley",
+    "developerUrl": "https://fullstackstanley.com"
+  }
+}
