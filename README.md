@@ -1,6 +1,6 @@
 # Contact Form Validation
 
-Simple contact form validation for the Craft CMS 3 Contact Form plugin using GUMP.
+Simple server-side contact form validation for the [Craft CMS 3 Contact Form plugin](https://github.com/craftcms/contact-form) using [GUMP](https://github.com/Wixel/GUMP).
 
 ## Installation
 
