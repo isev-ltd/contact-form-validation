@@ -4,6 +4,24 @@ Simple server-side contact form validation for the [Craft CMS 3 Contact Form plu
 
 ## Installation
 
+Add the package to your ```composer.json``` file
+
+```
+"isev-ltd/contact-form-validation": "~0.0.1"
+```
+
+or install via command line 
+
+```
+composer require isev-ltd/contact-form-validation:0.0.*
+```
+
+Go to your Craft CMS 3 admin area **Settings**. Under **System** click **Plugins**.
+
+Install ```Contact Form``` if you haven't already. Then install ```Contact Form Validation```.
+
+Go back to **Settings**. Under **Plugins** go to **Contact Form** and make sure that your **to** email is added.
+
 ## Usage
 
 Create a config file named ```config/contact-form-validation.php```
@@ -43,6 +61,17 @@ Note that, ```fromName```, ```fromEmail```, and ```subject``` are the default fi
 The below form omits the default subject field, and adds a phone number. Because the phone number is custom, the message field is changed to ```message[body]```. Using the example config file all fields are required, and email needs to be an email address.
 
 ```twig
+    {% macro errorList(errors) %}
+        {% if errors %}
+            <ul class="errors">
+                {% for error in errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endmacro %}
+    {% from _self import errorList %}
+
     <form method="post" action="" accept-charset="UTF-8">
         {{ csrfInput() }}
         <input type="hidden" name="redirect" value="{{ "#{craft.request.url}?sent=1"|hash }}">
@@ -108,5 +137,6 @@ Currently this plugin only supports [GUMP](https://github.com/Wixel/GUMP) for va
 
 ## Todo
 
-* * Allow using Illuminate Validator
-* * Testing
+* Allow using Illuminate Validator
+* Testing
+* Check Attachments
