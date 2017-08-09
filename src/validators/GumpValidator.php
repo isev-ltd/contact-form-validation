@@ -1,4 +1,4 @@
-<?php namespace Acoustep\ContactFormValidation\validators;
+<?php namespace Isev\ContactFormValidation\validators;
 
 use \GUMP;
 class GumpValidator {

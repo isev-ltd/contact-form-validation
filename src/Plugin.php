@@ -1,10 +1,10 @@
 <?php
-namespace Acoustep\ContactFormValidation;
+namespace Isev\ContactFormValidation;
 
 use craft\contactform\models\Submission;
 use yii\base\Event;
 use yii\base\ModelEvent;
-use Acoustep\ContactFormValidation\validators\GumpValidator;
+use Isev\ContactFormValidation\validators\GumpValidator;
 
 class Plugin extends \craft\base\Plugin
 {
@@ -23,7 +23,7 @@ class Plugin extends \craft\base\Plugin
     }
     protected function createSettingsModel()
     {
-        return new \Acoustep\ContactFormValidation\models\Settings();
+        return new \Isev\ContactFormValidation\models\Settings();
     }
 
     protected function getValidator() {

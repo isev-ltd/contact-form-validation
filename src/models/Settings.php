@@ -1,6 +1,6 @@
 <?php
 
-namespace Acoustep\ContactFormValidation\models;
+namespace Isev\ContactFormValidation\models;
 
 use craft\base\Model;
 
